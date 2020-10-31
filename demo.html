@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Moble(id, name) {
+        this.id = id;
+        this.name = name;
+        this.massage = "";
+        this.setMassage = function (massage) {
+            this.massage = massage;
+        }
+        this.getMassage = function () {
+            return this.massage;
+        }
+        this.sendMassage = function (massage, moble){
+            moble.setMassage(massage);
+        }
+    }
+    var ios = new Moble(1, "iphone");
+    var android = new Moble(2,"OPPO");
+    ios.sendMassage(prompt("Nhap tin nhan muon gui"),android);
+    var massage  = android.getMassage();
+    alert(massage);
+</script>
+</body>
+</html>
